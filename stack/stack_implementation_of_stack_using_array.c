@@ -105,7 +105,7 @@ enter your choice0
 invalid choice
 PS C:\Users\DELL\OneDrive\Desktop\DSA>*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 #define SIZ 5 // it is not compalsary to use
 void push(int);
 void traverse();
@@ -165,7 +165,7 @@ void traverse()
             printf("%d\n", stack[i]);
     }
 }
-
+*/
 /*90
 80
 5

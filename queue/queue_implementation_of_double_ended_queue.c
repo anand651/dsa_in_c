@@ -102,7 +102,7 @@ void display()
         printf("display the data %d\n", dequeue[i]);
         i = (i + 1) % N;
     }
-    printf(" display the data %d\n", dequeue[rear]);
+    printf("display the data %d\n", dequeue[rear]);
 }
 
 main()
@@ -121,12 +121,12 @@ main()
 display the data 6
 display the data 5
 display the data 8
- display the data 9
+display the data 9
 delete the front 7
 delete the rear 9
 display the data 6
 display the data 5
- display the data 8
+display the data 8
 PS C:\Users\DELL\OneDrive\Desktop\DSA> */
 
 #include <stdio.h>

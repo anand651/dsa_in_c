@@ -43,7 +43,7 @@ int main()
         }
     }
     if(status==0)
-    printf("number is notfound");
+    printf("number is not found");
     else
     printf("number is found");
     return 0;

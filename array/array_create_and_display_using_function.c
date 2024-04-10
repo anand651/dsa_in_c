@@ -9,7 +9,7 @@ main()
     create(x, n);
     display(x, n);
 }
-void create(int y[], int p)
+void create(int *y, int p)
 {
     printf("enter the number");
     for (int i = 0; i < p; i++)

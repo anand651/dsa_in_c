@@ -160,7 +160,7 @@ void ctraverse()
     while (i != rear)
     {
         printf("display item %d\n", cqueue[i]);
-        if (i == 4)
+        if (i == SIZ-1)
         {
             i = 0;
         }

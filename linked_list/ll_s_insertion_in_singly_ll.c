@@ -1,109 +1,125 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 struct node
 {
-   int data;
-   struct node *next;
+    int data;
+    struct node *next;
 };
-struct node *head=NULL,*newnode,*temp;
-int pos,i=1,count=0;
+struct node *head = NULL, *newnode, *temp;
+int pos, i = 1, count = 0;
 void create()
 {
-int choice;
-do
-{
-    newnode=(struct node*)malloc(sizeof(struct node));
-    printf("enter the data");
-    scanf("%d",&newnode->data);
-    newnode->next=0;
-    if(head==0)
+    int choice;
+    do
     {
-        head=temp=newnode;
+        newnode = (struct node *)malloc(sizeof(struct node));
+        printf("enter the data");
+        scanf("%d", &newnode->data);
+        newnode->next = 0;
+        if (head == 0)
+        {
+            head = temp = newnode;
+        }
+        else
+        {
+            temp->next = newnode;
+            temp = newnode;
+        }
+        printf("do you want to continue 0,1");
+        scanf("%d", &choice);
+    } while (choice == 1);
+}
+
+void display()
+{
+    int count = 0;
+    printf("display the inserted data\n");
+    temp = head;
+    while (temp != 0)
+    {
+        printf("%d\n", temp->data);
+        temp = temp->next;
+        count++;
     }
-    else{
-        temp->next=newnode;
-        temp=newnode;
-   }
-    printf("do you want to continue 0,1");
-    scanf("%d",&choice);
-}while(choice==1);
+    printf("count=%d\n", count);
 }
 
-void display(){
-    int count=0;
-printf("display the inserted data\n");
- temp=head;
-while(temp!=0)
+void insertinbeg()
 {
-printf("%d\n",temp->data);
-temp=temp->next;
-count++;
-}
-printf("count=%d\n",count);
-}
-
-void insertinbeg(){
-newnode=(struct node*)malloc(sizeof(struct node));
-printf("you can insert");
-scanf("%d",&newnode->data);
-newnode->next=head;
-head=newnode;
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("you can insert");
+    scanf("%d", &newnode->data);
+    newnode->next = head;
+    head = newnode;
 }
 
-void insertinpos(){
-newnode=(struct node*)malloc(sizeof(struct node));
-printf("enter the position");
-scanf("%d",&pos);
-if(pos>count)
+void insertinpos()
 {
-printf("invalid position");
-}
-else{
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("enter the position(index number)");
+    scanf("%d", &pos);
     temp=head;
-    while(i<pos)
+    while(temp->next!=NULL)
     {
+        count++;
         temp=temp->next;
-        i++;
     }
-    printf("enter the data");
-    scanf("%d",&newnode->data);
-    newnode->next=temp->next;
-    temp->next=newnode;
-}
+    if (pos > count || pos <= 0)
+    {
+        printf("invalid position");
+    }
+    else
+    {
+        temp = head;
+        while (i < pos)
+        {
+            temp = temp->next;
+            i++;
+        }
+        printf("enter the data");
+        scanf("%d", &newnode->data);
+        newnode->next = temp->next;
+        temp->next = newnode;
+    }
 }
 
-void insertinend(){
-newnode= (struct node*)malloc(sizeof(struct node));
-printf("enter the data you want to insert");
-scanf("%d",&newnode->data);
-newnode->next=0;
-temp=head;
-while(temp->next!=0)
+void insertinend()
 {
-    temp=temp->next;
-}
-temp->next=newnode;
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("enter the data you want to insert");
+    scanf("%d", &newnode->data);
+    newnode->next = 0;
+    temp = head;
+    while (temp->next != 0)
+    {
+        temp = temp->next;
+    }
+    temp->next = newnode;
 }
 
-main(){
+main()
+{
     create();
-    int choice=1;
+    int choice;
     display();
-    printf("press 1 for insert data in begning\n press 2 for inser data in end\n press 3 for insert data in the specific position\n");
-    scanf("%d",&choice);
+    printf("press 1 for insert data in begning\npress 2 for inser data in end\npress 3 for insert data in the specific position\n");
+    scanf("%d", &choice);
     switch (choice)
     {
-    case 1:insertinbeg();
-          display();
+    case 1:
+        insertinbeg();
+        display();
         break;
-        case 2:insertinend();
-          display();
+    case 2:
+        insertinend();
+        display();
         break;
-       case 3:insertinpos();
+    case 3:
+        insertinpos();
         display();
         break;
     default:
-    printf("error");
+        printf("error");
         break;
     }
 }
@@ -122,8 +138,8 @@ display the inserted data
 7
 count=4
 press 1 for insert data in begning
- press 2 for inser data in end
- press 3 for insert data in the specific position
+press 2 for inser data in end
+press 3 for insert data in the specific position
 1
 you can insert2
 display the inserted data

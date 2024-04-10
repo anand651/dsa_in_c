@@ -15,16 +15,31 @@ main()
     printf("%d\n", x[i]);
   }
   printf("sorting of the array\n");
-  for (i = 1; i < size; i++)
+
+  // for (i = 1; i < size; i++)
+  // {
+  //   a = x[i];
+  //   j = i - 1;
+  //   while (j >= 0 && x[j] > a)
+  //   {
+  //     x[j + 1] = x[j];
+  //     j--;
+  //   }
+  //   x[j + 1] = a;
+  // }
+  //       OR
+  // this is called selection sort
+  for (int i = 0; i < size - 1; i++)
   {
-    a = x[i];
-    j = i - 1;
-    while (j >= 0 && x[j] > a)
+    for (int j = i + 1; j < size; j++)
     {
-      x[j + 1] = x[j];
-      j--;
+      if (x[i] > x[j])
+      {
+        a = x[i];
+        x[i] = x[j];
+        x[j] = a;
+      }
     }
-    x[j + 1] = a;
   }
   printf("display the sorting of data\n");
   for (i = 0; i < size; i++)
