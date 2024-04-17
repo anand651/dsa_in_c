@@ -137,7 +137,7 @@ main()
     createdll();
     int choice = 1;
     display();
-    printf("press 1 for delete data in begning\n press 2 for delete data in end\n press 3 for delete data in the specific position\n");
+    printf("press 1 for delete data in begning\npress 2 for delete data in end\npress 3 for delete data in the specific position\n");
     scanf("%d", &choice);
     switch (choice)
     {
@@ -158,3 +158,26 @@ main()
         break;
     }
 }
+/*enter the data1
+do want you to continue 0 11
+enter the data2
+do want you to continue 0 11
+enter the data3
+do want you to continue 0 11
+enter the data4
+do want you to continue 0 10
+display the inserted data
+1
+2
+3
+4
+press 1 for delete data in begning
+press 2 for delete data in end
+press 3 for delete data in the specific position
+3
+enter the position2
+display the inserted data
+1
+3
+4
+PS C:\Users\DELL\OneDrive\Desktop\dsa_in_c\linked_list>*/

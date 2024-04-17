@@ -122,7 +122,7 @@ main()
     createcll();
     int choice = 1;
     display();
-    printf("\npress 1 for insert data in begning\n press 2 for inser data in end\n press 3 for insert data in the specific position\n");
+    printf("\npress 1 for insert data in begning\npress 2 for inser data in end\npress 3 for insert data in the specific position\n");
     scanf("%d", &choice);
     switch (choice)
     {
@@ -157,8 +157,8 @@ display the inserted data
 7
 8
 press 1 for insert data in begning
- press 2 for inser data in end
- press 3 for insert data in the specific position
+press 2 for inser data in end
+press 3 for insert data in the specific position
 1
 enter the data90
 display the inserted data

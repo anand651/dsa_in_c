@@ -51,19 +51,19 @@ main()
     {
         scanf("%d", &x[i]);
     }
-    printf("enter the number and position (index number)");
+    printf("enter the number and position");
     scanf("%d%d", &q, &r);
     insert(x, p, q, r);
     printf("after the inserted data");
     display(x, p);
-    printf("\nenter the position (index number) which has been deleted");
+    printf("\nenter the position which has been deleted");
     scanf("%d", &s);
     delete (x, s, p);
 }
 void insert(int y[], int size, int number, int position)
 {
     int i;
-    for (i = size; i > position; i--)
+    for (i = size; i >= position; i--)
     {
         y[i] = y[i - 1];
     }
@@ -80,7 +80,7 @@ void display(int z[], int size)
 void delete(int w[], int dposition, int size)
 {
     int i;
-    for (i = dposition; i <= size; i++)
+    for (i = dposition-1; i <= size; i++)
     {
         w[i] = w[i + 1];
     }
@@ -96,10 +96,10 @@ void delete(int w[], int dposition, int size)
 3
 4
 5
-enter the number and position (index number)9
+enter the number and position9
 3
-after the inserted data123945
-enter the position (index number) which has been deleted4
+after the inserted data129345
+enter the position which has been deleted4
 after the deleted data
-12395
-PS C:\Users\DELL\OneDrive\Desktop\dsa in c>*/
+12945
+PS C:\Users\DELL\OneDrive\Desktop\dsa_in_c\array>*/

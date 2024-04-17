@@ -77,3 +77,22 @@ main()
         break;
     }
 }
+/*enter the data1
+do you want to continue 0,11
+enter the data2
+do you want to continue 0,11
+enter the data3
+do you want to continue 0,10
+display the inserted data
+1
+2
+3
+count=3
+press 1 for reverse the data
+1
+display the inserted data
+3
+2
+1
+count=3
+PS C:\Users\DELL\OneDrive\Desktop\dsa_in_c\linked_list>*/

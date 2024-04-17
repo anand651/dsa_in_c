@@ -34,7 +34,6 @@ void create()
 
 void display()
 {
-    // struct node *temp;
     temp = head;
     while (temp != 0)
     {

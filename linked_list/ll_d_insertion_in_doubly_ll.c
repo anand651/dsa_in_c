@@ -7,7 +7,7 @@ struct node
     struct node *prev;
 };
 struct node *head = NULL, *newnode, *tail, *temp;
-int count = 0;
+int count;
 
 void createdll()
 {
@@ -36,6 +36,7 @@ void createdll()
 
 void display()
 {
+    count=0;
     temp = head;
     while (temp != 0)
     {
@@ -111,7 +112,7 @@ main()
     createdll();
     int choice = 1;
     display();
-    printf("\npress 1 for insert data in begning\n press 2 for inser data in end\n press 3 for insert data in the specific position\n");
+    printf("\npress 1 for insert data in begning\npress 2 for inser data in end\npress 3 for insert data in the specific position\n");
     scanf("%d", &choice);
     switch (choice)
     {
@@ -141,11 +142,11 @@ do you want to continue 0,10
 194
 count=3
 press 1 for insert data in begning
- press 2 for inser data in end
- press 3 for insert data in the specific position
+press 2 for inser data in end
+press 3 for insert data in the specific position
 3
 enter the position2
 enter the data8
 1894
-count=9
+count=4
 PS C:\Users\DELL\OneDrive\Desktop\dsa_in_c\linked_list>*/

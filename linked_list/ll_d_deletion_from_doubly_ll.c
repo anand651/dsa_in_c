@@ -98,7 +98,7 @@ main()
     createdll();
     int choice = 1;
     display();
-    printf("press 1 for delete data in begning\n press 2 for delete data in end\n press 3 for delete data in the specific position\n");
+    printf("press 1 for delete data in begning\npress 2 for delete data in end\npress 3 for delete data in the specific position\n");
     scanf("%d", &choice);
     switch (choice)
     {
@@ -127,8 +127,8 @@ enter the data9
 do you want to continue 0,10
 179
 count=3press 1 for delete data in begning
- press 2 for delete data in end
- press 3 for delete data in the specific position
+press 2 for delete data in end
+press 3 for delete data in the specific position
 3
 enter position2
 19

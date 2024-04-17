@@ -59,3 +59,13 @@ main()
   createdll();
   display();
 }
+/*enter the data1
+do want you to continue 0 11
+enter the data2
+do want you to continue 0 11
+enter the data3
+do want you to continue 0 10
+1
+2
+3
+PS C:\Users\DELL\OneDrive\Desktop\dsa_in_c\linked_list>*/

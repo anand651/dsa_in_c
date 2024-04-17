@@ -5,7 +5,7 @@ struct node
     int data;
     struct node *next;
 };
-struct node *head = NULL, *newnode, *temp;
+struct node *head = NULL, *newnode, *temp,*prev;
 int pos, i = 1, count = 0;
 void create()
 {
@@ -56,7 +56,7 @@ void insertinbeg()
 void insertinpos()
 {
     newnode = (struct node *)malloc(sizeof(struct node));
-    printf("enter the position(index number)");
+    printf("enter the position");
     scanf("%d", &pos);
     temp=head;
     while(temp->next!=NULL)
@@ -64,7 +64,7 @@ void insertinpos()
         count++;
         temp=temp->next;
     }
-    if (pos > count || pos <= 0)
+    if (pos > count+1 || pos <= 0)
     {
         printf("invalid position");
     }
@@ -73,13 +73,14 @@ void insertinpos()
         temp = head;
         while (i < pos)
         {
+            prev=temp;
             temp = temp->next;
             i++;
         }
         printf("enter the data");
         scanf("%d", &newnode->data);
-        newnode->next = temp->next;
-        temp->next = newnode;
+        newnode->next = prev->next;
+        prev->next = newnode;
     }
 }
 
@@ -140,13 +141,14 @@ count=4
 press 1 for insert data in begning
 press 2 for inser data in end
 press 3 for insert data in the specific position
-1
-you can insert2
+3
+enter the position2
+enter the data9
 display the inserted data
-2
 4
+9
 5
 6
 7
 count=5
-PS C:\Users\DELL\OneDrive\Desktop\dsa in c\linked_list>*/
+PS C:\Users\DELL\OneDrive\Desktop\dsa_in_c\linked_list>*/

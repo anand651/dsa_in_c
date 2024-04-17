@@ -1,7 +1,7 @@
 #include <stdio.h>
 main()
 {
-    int a[50], size, i, num, pos;
+    int a[10], size, i, num, pos;
     printf("enter the size of array");
     scanf("%d", &size);
     printf("enter the element of the array");
@@ -19,9 +19,9 @@ main()
     }
     else
     {
-        for (i = size - 1; i >= pos - 1; i--)
+        for (i = size; i >= pos; i--)
         {
-            a[i + 1] = a[i];
+            a[i] = a[i-1];
         }
         a[pos - 1] = num;
         size++;
@@ -54,7 +54,7 @@ main()
     {
         scanf("%d", &x[i]);
     }
-    printf("enter the number and position(index number)");
+    printf("enter the number and position");
     scanf("%d%d", &q, &r);
     insert(x, p, q, r);
     printf("after inserted the data");
@@ -66,7 +66,7 @@ main()
 void insert(int y[10], int size, int number, int position)
 {
     int i;
-    for (i = size; i > position; i--)
+    for (i = size; i >= position; i--)
     {
         y[i] = y[i - 1];
     }
@@ -78,7 +78,7 @@ enter the number1
 3
 4
 5
-enter the number and position(index number)9
+enter the number and position9
 2
-after inserted the data129345
+after inserted the data192345
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c>*/
