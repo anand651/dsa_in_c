@@ -107,7 +107,8 @@ int main()
     i--;
     while (i >= 0)
     {
-        if (isalpha(infix[i]) || isdigit(infix[i]))
+        // if (isalpha(infix[i]) || isdigit(infix[i]))   OR
+        if(isalnum(infix[i]))
         {
             prefix[j++] = infix[i--];
         }

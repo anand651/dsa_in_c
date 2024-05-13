@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 5 // #define N 5 - it is not compalsary to use.
+#define N 5
 int stack[N];
 int top = -1;
 void push()
@@ -22,7 +22,7 @@ void pop()
     int item;
     if (top == -1)
     {
-        printf("overflow");
+        printf("underflow");
     }
     else
     {
@@ -106,7 +106,7 @@ invalid choice
 PS C:\Users\DELL\OneDrive\Desktop\DSA>*/
 
 /*#include <stdio.h>
-#define SIZ 5 // it is not compalsary to use
+#define SIZ 5 
 void push(int);
 void traverse();
 int pop();
